@@ -1,0 +1,169 @@
+:root {
+  --background: #cecece;
+  --background-menu: #f5f5f5;
+  --contacts: #0c0c0c;
+  --menu-items: #0c0c0c;
+  --footer: #0c0c0c;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+footer {
+  flex: 0 0 content;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+nav.contacts {
+  background-color: var(--contacts);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+nav.contacts ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 42px;
+  /* padding: 1rem 0rem 1rem 0rem; */
+  /* top direita baixo esquerda */
+}
+
+nav.contacts ul .mail ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav.contacts ul .mail ul li i {
+  padding: 0 5px 0 5px;
+}
+
+nav.contacts ul .mail ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav.contacts ul .mail ul li.phone {
+  padding-left: 0.3rem;
+}
+
+nav.contacts ul .mail ul li.email {
+  padding-left: 2rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--background-menu);
+  height: 140px;
+}
+
+.logo {
+  /* background-color: darkblue; */
+}
+
+.logo img {
+  width: 100%;
+}
+
+.menu nav {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  /* background-color: cornflowerblue; */
+}
+
+.menu nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu nav ul li {
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+.menu nav ul li a {
+  color: var(--menu-items);
+}
+
+.menu nav ul li a:hover {
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #da3c1f;
+}
+
+.menu nav ul li a.active {
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #da3c1f;
+}
+
+main {
+  background-color: chocolate;
+  flex: 1 1 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.rafa {
+  padding: 5rem;
+}
+
+footer {
+  /* min-height: 20vh; */
+  background-color: var(--footer);
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 820px) and (min-width: 640px) {
+  nav.contacts {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 470px) {
+  nav.contacts {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 470px) and (min-width: 375px) {
+  nav.contacts {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  nav.contacts {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  nav.contacts {
+    font-size: 4px;
+  }
+}
