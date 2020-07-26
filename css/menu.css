@@ -1,0 +1,250 @@
+header .menu-toggle {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+header .menu-toggle.on {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  transition-duration: 0.3s;
+}
+
+.one,
+.two,
+.three {
+  background-color: var(--color-menu);
+  height: 6px;
+  width: 100%;
+  margin: 6px auto;
+
+  transition-duration: 0.3s;
+}
+
+.snip1135 {
+  display: flex;
+  flex-direction: row;
+}
+
+.snip1135 li.item {
+  display: inline-block;
+  margin: 0 1em;
+  font-size: 16px;
+}
+
+.snip1135 li.sub-menu {
+  display: inline-block;
+  margin: 0 1em;
+  font-size: 16px;
+}
+
+.snip1135 a {
+  padding: 0.2rem;
+  color: var(--color-menu);
+  position: relative;
+  letter-spacing: 1px; /*espaçamento entre caracteres de texto.*/
+  text-decoration: none;
+}
+
+.snip1135 a:before,
+.snip1135 a:after {
+  position: absolute;
+  transition: all 0.35s ease;
+}
+
+.snip1135 a:before {
+  bottom: 0;
+  display: block;
+  height: 2px;
+  opacity: 0;
+  width: 0;
+  content: "";
+  background-color: #0c0c0c;
+}
+
+.snip1135 li a:hover:before,
+.current a:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.sub-menu ul li:hover {
+  background-color: #da3c1f;
+  cursor: pointer;
+}
+
+.sub-item:hover {
+  background-color: #da3c1f;
+}
+
+/* coloca a cor por cima */
+.snip1135 a:after {
+  left: 0;
+  top: 0;
+  padding-top: 0.39rem;
+  padding-left: 0.2rem;
+  position: absolute;
+  content: attr(data-hover);
+  color: var(--color-menu);
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+
+.snip1135 a:hover:after,
+.snip1135 .current a:after {
+  max-width: 100%;
+}
+
+ul li.sub-menu ul.sub-items {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-menu);
+  position: absolute;
+
+  margin: 1.4rem 0 0 -3rem;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+ul li.sub-menu ul.active {
+  max-height: 100%;
+}
+
+.snip1135 li ul li {
+  padding: 1rem;
+  margin: 0;
+  color: var(--color);
+  display: list-item;
+  position: relative;
+  border-bottom: 1px solid var(--color2);
+}
+
+.snip1135 li ul li a {
+  color: var(--color);
+  width: 0;
+}
+
+.accordion:after {
+  content: "\21A1";
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  header .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  header img {
+    padding: 2rem;
+    width: 180px;
+  }
+
+  header .menu-toggle {
+    display: block;
+    padding: 3rem 2rem;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  .snip1135 {
+    all: initial;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-menu);
+  }
+
+  .snip1135 li.item {
+    all: initial;
+    padding: 1rem;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+
+  .snip1135 li.sub-menu {
+    all: initial;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .snip1135 li.current {
+    background-color: #cecece;
+  }
+
+  .snip1135 a {
+    all: initial;
+    letter-spacing: 1px; /*espaçamento entre caracteres de texto.*/
+    text-decoration: none;
+    color: var(--color);
+  }
+
+  .snip1135 a:hover:after,
+  .snip1135 .current a:after {
+    max-width: 0;
+  }
+
+  .snip1135 a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* .sub-menu ul li:hover {
+    background-color: #da3c1f;
+    cursor: pointer;
+  }
+
+  .sub-item:hover {
+    background-color: #da3c1f;
+  } */
+
+  ul li.sub-menu ul.sub-items {
+    all: initial;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-menu);
+
+    transition: max-height 0.5s;
+    overflow: hidden;
+    max-height: 0;
+
+    /* position: absolute;
+
+    margin: 1.4rem 0 0 -3rem;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    transition: max-height 0.5s;
+    overflow: hidden;
+    max-height: 0; */
+  }
+
+  ul li.sub-menu ul.active {
+    max-height: 100%;
+  }
+
+  ul li.sub-menu ul li {
+    font-weight: 600;
+    padding: 25px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: #2b3035;
+    cursor: pointer;
+  }
+
+  ul li.sub ul li:hover {
+    color: #f75f37;
+  }
+}
