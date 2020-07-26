@@ -1,62 +1,54 @@
 const menu = document.getElementsByClassName("sub");
+const menuSistrel = document.querySelector('.menu-sistrel');
+const menuToggle = document.querySelector(".menu-toggle");
 const acc = document.getElementsByClassName("accordion");
 const subItems = document.getElementsByClassName("sub-items");
 
-let showMenu = true;
-let rafa = true;
+
+let showToggle = true;
+
+const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+sessionStorage.setItem("intFrameWidth", w);
+
+window.addEventListener('resize', () => {
+  const intFrameWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  sessionStorage.setItem("intFrameWidth", intFrameWidth);
+})
+
 
 /** sub list  */
 Array.from(menu).forEach((element, index) => {
-  let show = true;
+  let showMenu = true;
 
   element.addEventListener("mouseover", () => {
-    acc[index].classList.add("on");
-    subItems[index].classList.add("active");
+    // console.log('mouseover', `intFrameWidth: ${sessionStorage.getItem('intFrameWidth')}`);
+    if (sessionStorage.getItem('intFrameWidth') > 1200) {
+      acc[index].classList.add("on");
+      subItems[index].classList.add("active");
+    }
   });
-
-  // element.addEventListener("click", mySecondFunction);
 
   element.addEventListener("mouseout", () => {
-    acc[index].classList.remove("on");
+    // console.log('mousemouseoutover', `intFrameWidth: ${sessionStorage.getItem('intFrameWidth')}`);
+    if (sessionStorage.getItem('intFrameWidth') > 1200) {
+      acc[index].classList.remove("on");
       subItems[index].classList.remove("active");
+    }
   });
 
-  // element.addEventListener("mouseover", function() {
-  //   acc[index].classList.toggle("on", show);
-  //   subItems[index].classList.toggle("active", show);
-  //   show = !show;
-  // });
+  element.addEventListener("click", () => {
+    // console.log('click', `intFrameWidth: ${sessionStorage.getItem('intFrameWidth')}`);
+    if (sessionStorage.getItem('intFrameWidth') <= 1200) {
+      acc[index].classList.toggle("on", showMenu);
+      subItems[index].classList.toggle("active", showMenu);
+      showMenu = !showMenu;
+    }
+  });
 });
 
-function myFunction() {
-  console.log("Moused over!");
-}
+console.log('menuToggle', menuToggle)
 
-function mySecondFunction() {
-  console.log("Clicked!");
-}
-
-function myThirdFunction() {
-  console.log("Moused out!");
-}
-
-
-// menu[0].addEventListener("mouseover", func, false);
-// menu[0].addEventListener("mouseout", func1, false);
-
-// function func()
-// {  // not needed since item is already global, 
-//    // I am assuming this is here just because it's sample code?
-//    // var item = document.getElementById("button"); 
-//   //  item.setAttribute("style", "background-color:blue;")
-//   // acc[0].classList.toggle("on", show);
-//   subItems[0].classList.toggle("active", rafa);
-//   console.log('A')
-// }
-
-// function func1()
-// {  
-//   console.log('B')
-//   subItems[0].classList.toggle("active", rafa);
-//   //  item.setAttribute("style", "background-color:green;")
-// }
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("on");
+  menuSistrel.classList.toggle("active");
+});

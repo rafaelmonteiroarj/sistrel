@@ -49,13 +49,7 @@ header .menu-toggle {
   padding: 10px;
   cursor: pointer;
   display: none;
-}
-
-header .menu-toggle.on {
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  transition-duration: 0.3s;
+  transition-duration: 0.4s;
 }
 
 .one,
@@ -67,6 +61,18 @@ header .menu-toggle.on {
   margin: 6px auto;
 
   transition-duration: 0.3s;
+}
+
+.menu-toggle.on .one {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menu-toggle.on .two {
+  opacity: 0;
+}
+
+.menu-toggle.on .three {
+  transform: rotate(45deg) translate(-11px, -8px);
 }
 
 /** menu sistrel */
@@ -200,6 +206,18 @@ footer {
 
   header nav {
     width: 100%;
+
+    transition: max-height 0.5s;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  header nav.active {
+    width: 100%;
+
+    transition: max-height 0.5s;
+    overflow: hidden;
+    max-height: 100vh;
   }
 
   header ul {
@@ -211,6 +229,7 @@ footer {
 
   nav ul li {
     all: initial;
+    font-weight: 600;
   }
 
   nav ul li.item {
@@ -228,7 +247,6 @@ footer {
     all: initial;
     display: flex;
     flex-direction: column;
-    font-weight: 600;
     cursor: pointer;
   }
 
