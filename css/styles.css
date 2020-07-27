@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --background2: #0c0c0c;
+  --background3: #cecece;
 
   --color: #ffffff;
   --color2: #656565;
@@ -18,6 +19,11 @@ body {
   scroll-behavior: smooth;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .wrapper {
   min-height: 100%;
   display: grid;
@@ -32,11 +38,6 @@ body {
 header {
   position: sticky;
   top: 0;
-  /* right: 0;
-  left: 0;
-  bottom: 0; */
-  background-color: #cecece;
-
   grid-area: header;
   height: 100%;
   max-width: 100%;
@@ -46,6 +47,10 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+header.animeScroll {
+  background-color: var(--background);
 }
 
 header img {
@@ -182,8 +187,89 @@ main p {
 
 footer {
   grid-area: footer;
-  background: purple;
+  background-color: var(--color4);
+  color: var(--color);
   min-height: 40px;
+}
+
+footer .footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 3rem;
+  /* width: 100%; */
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+footer h5 {
+  font-family: "Exo 2", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer hr {
+  height: 2px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 32px;
+  background: var(--color3);
+}
+
+footer .links {
+  padding: 0.1rem 0 1rem 0;
+}
+
+footer .footer-wrapper ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+footer ul .links ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul .social_icons ul {
+  /* width: 60px; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: stretch; */
+  justify-content: flex-start;
+}
+
+footer ul .social_icons li {
+  background-color: var(--color2);
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+footer ul .links li {
+  font-family: "Lato";
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  width: 100%;
+}
+
+footer .footer-copy {
+  background-color: var(--color2);
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @media (max-width: 1200px) {
@@ -344,9 +430,21 @@ footer {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   header img {
     padding: 2rem;
     width: 120px;
+  }
+}
+
+@media (max-width: 432px) {
+  footer .footer-copy {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 387px) {
+  footer .footer-copy {
+    font-size: 10px;
   }
 }
