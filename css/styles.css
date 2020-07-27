@@ -1,6 +1,6 @@
 :root {
   --background: #ffffff;
-  --background-footer: #0c0c0c;
+  --background2: #0c0c0c;
 
   --color: #ffffff;
   --color2: #656565;
@@ -14,6 +14,8 @@ body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
   background-color: var(--background);
+
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -28,6 +30,13 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  /* right: 0;
+  left: 0;
+  bottom: 0; */
+  background-color: #cecece;
+
   grid-area: header;
   height: 100%;
   max-width: 100%;
@@ -163,8 +172,12 @@ header ul .sub-items li a {
 
 main {
   grid-area: main;
-  background: #656565;
   color: #444;
+  padding: 3rem;
+}
+
+main p {
+  padding: 10px;
 }
 
 footer {
