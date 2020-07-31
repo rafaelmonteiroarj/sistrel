@@ -19,21 +19,6 @@ body {
   scroll-behavior: smooth;
 }
 
-#btnTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  height: 50px;
-  width: 50px;
-  color: #fff;
-  background: #333333;
-  border: none;
-  border-radius: 50vh;
-  display: none;
-  outline-style: none;
-  cursor: pointer;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -42,12 +27,44 @@ body {
 .wrapper {
   min-height: 100%;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
+    "gallery gallery gallery"
     "header header header"
     "main main main"
     "footer footer footer";
   grid-template-columns: 100%;
+}
+
+section {
+  grid-area: gallery;
+}
+
+.carousel {
+  background: #eee;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+  background: var(--background2);
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.flickity-page-dots {
+  display: none;
 }
 
 header {
@@ -244,14 +261,6 @@ footer {
   min-height: 40px;
 }
 
-.disable {
-  display: none;
-}
-
-.disable2 {
-  visibility: hidden;
-}
-
 footer .footer-wrapper {
   display: flex;
   flex-direction: row;
@@ -331,6 +340,29 @@ footer .footer-copy {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.disable {
+  display: none;
+}
+
+.disable2 {
+  visibility: hidden;
+}
+
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  background: #333333;
+  border: none;
+  border-radius: 50vh;
+  display: none;
+  outline-style: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
