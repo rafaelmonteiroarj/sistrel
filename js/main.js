@@ -1,5 +1,7 @@
 const menu = document.getElementsByClassName("sub");
+const btnTop = document.getElementById("btnTop");
 const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 const header = document.querySelector('header');
 const menuSistrel = document.querySelector('.menu-sistrel');
 const menuToggle = document.querySelector(".menu-toggle");
@@ -50,11 +52,21 @@ Array.from(menu).forEach((element, index) => {
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('on');
   menuSistrel.classList.toggle('active');
+
+  if (menuSistrel.classList.contains("active")) {
+    footer.classList.add("disable");
+    main.classList.add("disable");
+    btnTop.classList.add("disable2");
+  } else {
+    footer.classList.remove("disable");
+    main.classList.remove("disable");
+    btnTop.classList.remove("disable2");
+  }
 });
 
 const animeScroll = () => {
   const windowTop = window.pageYOffset;
-  if (windowTop > main.offsetTop) {
+  if (windowTop > 100) {
     header.classList.add('animeScroll');
     console.log('>>>>>>>', windowTop);
   } else {
@@ -65,3 +77,20 @@ const animeScroll = () => {
 window.addEventListener('scroll', () => {
   animeScroll();
 })
+
+/** Botão para navegar até o TOPO */
+window.onscroll = () =>  scroll();
+
+const scroll = () => {
+  let btn = document.getElementById("btnTop");
+
+  if (document.documentElement.scrollTop > 50) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+const backToTop = () => {
+  document.documentElement.scrollTop = 0;
+}

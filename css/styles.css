@@ -19,6 +19,21 @@ body {
   scroll-behavior: smooth;
 }
 
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  background: #333333;
+  border: none;
+  border-radius: 50vh;
+  display: none;
+  outline-style: none;
+  cursor: pointer;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -39,7 +54,6 @@ header {
   position: sticky;
   top: 0;
   grid-area: header;
-  height: 100%;
   max-width: 100%;
   padding: 1rem;
 
@@ -192,6 +206,14 @@ footer {
   min-height: 40px;
 }
 
+.disable {
+  display: none;
+}
+
+.disable2 {
+  visibility: hidden;
+}
+
 footer .footer-wrapper {
   display: flex;
   flex-direction: row;
@@ -319,6 +341,14 @@ footer .footer-copy {
     height: auto;
   }
 
+  .options-menu {
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+  }
+
   header ul {
     all: initial;
     display: flex;
@@ -339,7 +369,8 @@ footer .footer-copy {
   }
 
   nav ul li.item:hover {
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
+    background-color: var(--color4);
   }
 
   nav ul li.sub {
@@ -350,7 +381,8 @@ footer .footer-copy {
   }
 
   nav ul li.sub:hover {
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
+    background-color: var(--color4);
   }
 
   nav ul li.item a {
@@ -402,15 +434,21 @@ footer .footer-copy {
     transition: max-height 0.5s;
     overflow: hidden;
     max-height: 0;
+
+    /* height: 0; */
   }
 
   nav ul li.sub ul.active {
     display: flex;
     flex-direction: column;
 
-    transition: max-height 0.5s;
+    /* transition: max-height 0.5s;
     overflow: hidden;
-    max-height: 100vh;
+    max-height: 100vh; */
+
+    transition: height 0.5s;
+    overflow: hidden;
+    max-height: 600px;
   }
 
   nav ul li.sub ul li {
