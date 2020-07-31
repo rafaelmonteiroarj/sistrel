@@ -267,6 +267,7 @@ footer ul .social_icons ul {
   flex-direction: row;
   /* align-items: stretch; */
   justify-content: flex-start;
+  padding-bottom: 2rem;
 }
 
 footer ul .social_icons li {
@@ -465,6 +466,18 @@ footer .footer-copy {
   header img {
     padding: 2rem;
     width: 140px;
+  }
+}
+
+@media (max-width: 660px) {
+  footer .footer-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
   }
 }
 
