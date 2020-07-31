@@ -199,6 +199,44 @@ main p {
   padding: 10px;
 }
 
+main hr {
+  height: 1px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  /* width: 32px; */
+  background: var(--color4);
+}
+
+main .payments-and-certificates ul {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+main .payments-and-certificates ul li h5 {
+  font-weight: bold;
+  color: var(--color3);
+  padding-bottom: 1rem;
+}
+
+.associated {
+  width: 200px;
+}
+
+.payment-methods {
+  width: 300px;
+}
+
+.psql {
+  width: 100px;
+}
+
+.abcic {
+  width: 100px;
+}
+
 footer {
   grid-area: footer;
   background-color: var(--color4);
@@ -462,10 +500,44 @@ footer .footer-copy {
   }
 }
 
+@media (max-width: 860px) {
+  .associated {
+    width: 160px;
+  }
+
+  .payment-methods {
+    width: 200px;
+  }
+
+  .psql {
+    width: 90px;
+  }
+
+  .abcic {
+    width: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   header img {
     padding: 2rem;
     width: 140px;
+  }
+
+  .associated {
+    width: 140px;
+  }
+
+  .payment-methods {
+    width: 160px;
+  }
+
+  .psql {
+    width: 90px;
+  }
+
+  .abcic {
+    width: 80px;
   }
 }
 
@@ -478,6 +550,37 @@ footer .footer-copy {
     justify-content: space-between;
     width: 100%;
     height: 100%;
+  }
+
+  main .payments-and-certificates ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .payments-and-certificates ul li {
+    padding-bottom: 4rem;
+  }
+
+  main .payments-and-certificates ul li h5 {
+    text-align: center;
+  }
+
+  .associated {
+    width: 200px;
+  }
+
+  .payment-methods {
+    width: 300px;
+  }
+
+  .psql {
+    width: 100px;
+  }
+
+  .abcic {
+    width: 100px;
   }
 }
 
