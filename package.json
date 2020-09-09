@@ -1,0 +1,65 @@
+{
+  "name": "sistrel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "dev": "yarn start:dev",
+    "build": "react-scripts build",
+    "build-and-serve": "yarn build && yarn start",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
+    "start:dev": "react-scripts start",
+    "start": "serve -s build -l 3000",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/*.js --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "classnames": "^2.2.6",
+    "formik": "^2.1.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-player": "^2.6.1",
+    "react-responsive-carousel": "^3.2.9",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "serve": "^11.3.2",
+    "source-map-explorer": "^2.5.0",
+    "styled-components": "^5.2.0",
+    "styled-media-query": "^2.1.2",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "prettier": "^2.1.1"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "env": {
+    "node": true,
+    "jest": true,
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier/react",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "import", "jsx-a11y", "react-hooks"],
+  "rules": {
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/click-events-have-key-events": 2,
+    "import/prefer-default-export": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "click-events-have-key-events": 0,
+    "linebreak-style": 0,
+    "no-dupe-args": 2,
+    "no-shadow": 0,
+    "no-plusplus": 0,
+    "no-static-element-interactions": 0,
+    "default-case": 2,
+    "no-invalid-this": 0,
+    "no-multi-spaces": 2,
+    "no-undef-init": 2,
+    "no-use-before-define": 2,
+    "array-bracket-newline": 2,
+    "array-bracket-spacing": 2,
+    "comma-spacing": 2,
+    "no-multiple-empty-lines": 2,
+    "semi-spacing": 2,
+    "semi-style": 2,
+    "arrow-spacing": 2,
+    "prefer-const": 2,
+    "no-return-await": 0,
+    "class-methods-use-this": 0,
+    "import/no-named-as-default": 0,
+    "import/extensions": ["off", "never"],
+    "react/jsx-props-no-spreading": 0,
+    "react/destructuring-assignment": [0, { "extensions": [".jsx"] }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "react/prop-types": 0,
+    "react/jsx-fragments": 0,
+    "camelcase": ["error", { "allow": ["am4themes_animated", "expire_in"] }],
+    "no-restricted-syntax": 2,
+    "no-console": 0,
+    "radix": 0,
+    "react/display-name": 0,
+    "prettier/prettier": 2,
+    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/button-has-type": "off"
+  }
+}
