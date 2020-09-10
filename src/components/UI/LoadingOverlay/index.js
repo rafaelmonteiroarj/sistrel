@@ -15,7 +15,7 @@ const LoadingOverlay = ({ title, backgroundColor, color }) => (
 LoadingOverlay.defaultProps = {
   title: 'Aguarde ...',
   backgroundColor: 'var(--background-option-3)',
-  color: 'var(--color-nextel)'
+  color: 'var(--color4)'
 };
 
 LoadingOverlay.propTypes = {

@@ -15,7 +15,7 @@ const PaymentsAndCertificates = () => {
           <S.Image
             src="images/payments.png"
             alt="Formas de Pagamentos"
-            width="300px"
+            width="250px"
           />
         </S.Item>
         <S.Item>

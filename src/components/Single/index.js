@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../../pages/Header';
 import Section from '../../pages/Section';
-import Footer from '../../pages/Footer';
-
 import Button from '../UI/Button';
+import Footer from '../../pages/Footer';
 
 import * as S from './styles';
 

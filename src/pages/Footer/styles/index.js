@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.footer`
   grid-area: footer;
@@ -12,28 +13,20 @@ export const Footer = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 1rem 3rem;
-  /* width: 100%; */
 `;
 
 export const MenuFooter = styled.ul`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-`;
+  flex-wrap: wrap;
 
-export const FooterCopy = styled.div`
-  background-color: var(--color2);
-  padding: 1rem 0;
-  font-weight: 600;
-  font-size: 14px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  ${media.lessThan('744px')`
+    flex-direction: column;
+  `}
 `;
 
 export const Item = styled.li``;
@@ -86,6 +79,17 @@ export const SocialOption = styled.li`
   padding: 1rem;
   margin-right: 1rem;
   cursor: pointer;
+`;
+
+export const FooterCopy = styled.div`
+  background-color: var(--color2);
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 export const Icon = styled.i``;

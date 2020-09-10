@@ -1,23 +1,43 @@
-import React, { useContext } from 'react';
+import React, { useContext, useCallback, useState, useEffect } from 'react';
 
 import { AppContext } from '../../lib/Context';
 
 import * as S from './styles';
 
 const Header = () => {
+  const [intFrameWidth, setIntFrameWidth] = useState(
+    window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth
+  );
+
   const { menu, setContext } = useContext(AppContext);
 
-  const { productsActive } = menu;
+  const resize = useCallback(() => {
+    setIntFrameWidth(
+      window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth
+    );
+  }, [setIntFrameWidth]);
+
+  useEffect(() => window.addEventListener('resize', () => resize()), [resize]);
+
+  const { productsActive, active } = menu;
 
   return (
     <S.Wrapper>
-      <S.Logo src="/images/logo.png" />
-      <S.MenuToggle>
-        <S.One />
-        <S.Two />
-        <S.Three />
-      </S.MenuToggle>
-      <S.NavWrapper>
+      <S.MenuLogo>
+        <S.Logo src="/images/logo.png" />
+        <S.MenuToggle
+          onClick={() => setContext({ menu: { ...menu, active: !active } })}
+        >
+          <S.One active={active} />
+          <S.Two active={active} />
+          <S.Three active={active} />
+        </S.MenuToggle>
+      </S.MenuLogo>
+      <S.NavWrapper active={active}>
         <S.Menu>
           <S.Item>
             <S.Link className="active" href="#">
@@ -27,17 +47,39 @@ const Header = () => {
           <S.Item>
             <S.Link href="#">Sobre Nós</S.Link>
           </S.Item>
-          <S.Item
-            onMouseOver={() =>
-              setContext({ menu: { productsActive: !productsActive } })
-            }
-            onMouseOut={() =>
-              setContext({ menu: { productsActive: !productsActive } })
-            }
+          <S.Sub
+            onMouseOver={() => {
+              if (intFrameWidth > 1210) {
+                setContext({
+                  menu: { ...menu, productsActive: !productsActive }
+                });
+              }
+            }}
+            onMouseOut={() => {
+              if (intFrameWidth > 1210) {
+                setContext({
+                  menu: { ...menu, productsActive: !productsActive }
+                });
+              }
+            }}
+            onClick={() => {
+              if (intFrameWidth <= 1210) {
+                setContext({
+                  menu: { ...menu, productsActive: !productsActive }
+                });
+              }
+            }}
           >
             <S.MenuSub>
               <S.Link href="#">Produtos</S.Link>
-              <S.Accordion />
+              <S.Accordion
+                className="feather-corner-right-down"
+                productsActive={!productsActive}
+              />
+              <S.Accordion
+                className="feather-corner-right-up"
+                productsActive={productsActive}
+              />
             </S.MenuSub>
             <S.MenuSubItens productsActive={productsActive}>
               <S.SubItem>
@@ -65,7 +107,7 @@ const Header = () => {
                 <S.LinkSub href="#">Nossos Serviços</S.LinkSub>
               </S.SubItem>
             </S.MenuSubItens>
-          </S.Item>
+          </S.Sub>
           <S.Item>
             <S.Link href="#">Obras Realizadas</S.Link>
           </S.Item>

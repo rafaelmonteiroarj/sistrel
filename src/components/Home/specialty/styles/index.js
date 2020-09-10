@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const SpecialtyWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const Title = styled.div`
@@ -12,6 +14,10 @@ export const Title = styled.div`
   font-size: 1.8rem;
   font-weight: bold;
   padding: 1rem;
+
+  ${media.lessThan('620px')`
+    font-size: 1.2rem;
+  `}
 `;
 
 export const SpecialtyItem = styled.div`
@@ -28,4 +34,5 @@ export const Image = styled.img`
 export const Desc = styled.span`
   font-weight: bold;
   text-align: center;
+  padding: 1rem;
 `;

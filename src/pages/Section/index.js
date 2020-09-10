@@ -20,7 +20,7 @@ const Section = ({ sectionEnabled }) => {
               className="control-arrow control-prev"
               onClick={clickHandler}
             >
-              <i className="feather-corner-up-left" />
+              <S.Icon className="feather-corner-up-left" />
             </S.Button>
           )
         }
@@ -30,7 +30,7 @@ const Section = ({ sectionEnabled }) => {
               className="control-arrow control-next"
               onClick={clickHandler}
             >
-              <i className="feather-corner-up-right" />
+              <S.Icon className="feather-corner-up-right" />
             </S.Button>
           )
         }

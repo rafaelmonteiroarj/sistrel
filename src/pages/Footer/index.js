@@ -29,7 +29,7 @@ const Footer = () => {
               <S.MenuLinks>
                 <S.LinkOption>Pré-Lajes</S.LinkOption>
                 <S.LinkOption>Lajes Prontas</S.LinkOption>
-                <S.LinkOption>Painel TreS.LinkOptionçado 35 cm</S.LinkOption>
+                <S.LinkOption>Painel Treliçado 35 cm</S.LinkOption>
                 <S.LinkOption>Escadas/Pré-Fabricados</S.LinkOption>
                 <S.LinkOption>Escoramentos/Travamento</S.LinkOption>
                 <S.LinkOption>Sistema Integrado</S.LinkOption>
