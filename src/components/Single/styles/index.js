@@ -11,6 +11,14 @@ export const Container = styled.div`
     'orcamento orcamento orcamento'
     'footer footer footer';
   grid-template-columns: 100%;
+
+  ${(props) =>
+    props.menuActive === true &&
+    `
+      section, main, footer, .backTop, .orcamento {
+        display:none;
+      }
+  `}
 `;
 
 export const Main = styled.main`

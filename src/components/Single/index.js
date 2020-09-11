@@ -1,14 +1,16 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../../pages/Header';
 import Section from '../../pages/Section';
 import Button from '../UI/Button';
 import Footer from '../../pages/Footer';
+import { AppContext } from '../../lib/Context';
 
 import * as S from './styles';
 
 const Single = ({ children, sectionEnabled }) => {
+  const { menu } = useContext(AppContext);
   const [backToTop, setBackToTop] = useState(false);
 
   const scroll = useCallback(() => {
@@ -17,13 +19,15 @@ const Single = ({ children, sectionEnabled }) => {
 
   useEffect(() => window.addEventListener('scroll', () => scroll()), [scroll]);
 
+  const { active } = menu;
+
   return (
     <>
-      <S.Container>
+      <S.Container menuActive={active}>
         <Header />
         <Section sectionEnabled={sectionEnabled} />
         <S.Main>{children}</S.Main>
-        <S.Orcamento>
+        <S.Orcamento className="orcamento">
           <S.Title>ATENDEMOS TODO O BRASIL</S.Title>
           <Button type="submit" kind="danger" size="large">
             SOLICITE UM ORÇAMENTO
@@ -31,6 +35,7 @@ const Single = ({ children, sectionEnabled }) => {
         </S.Orcamento>
         <Footer />
         <S.BackToTop
+          className="backTop"
           backToTop={backToTop}
           onClick={() => {
             document.documentElement.scrollTop = 0;
