@@ -28,7 +28,9 @@ const Header = () => {
   return (
     <S.Wrapper>
       <S.MenuLogo>
-        <S.Logo src="/images/logo.png" />
+        <S.LinkLogo href="/">
+          <S.Logo src="/images/logo.png" />
+        </S.LinkLogo>
         <S.MenuToggle
           onClick={() => setContext({ menu: { ...menu, active: !active } })}
         >
@@ -40,12 +42,12 @@ const Header = () => {
       <S.NavWrapper active={active}>
         <S.Menu>
           <S.Item>
-            <S.Link className="active" href="#">
+            <S.Link className="active" href="/">
               Home
             </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link href="#">Sobre Nós</S.Link>
+            <S.Link href="/about">Sobre Nós</S.Link>
           </S.Item>
           <S.Sub
             onMouseOver={() => {

@@ -1,24 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-export const Line = styled.hr`
-  height: 1px;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  /* width: 32px; */
-  background: var(--color4);
-`;
-
-export const Company = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  ${media.lessThan('768px')`
-    flex-direction: column;
-  `}
-`;
-
 export const Title = styled.div`
   color: #da251b;
   text-align: center;

@@ -32,6 +32,8 @@ export const MenuLogo = styled.div`
   `}
 `;
 
+export const LinkLogo = styled.a``;
+
 export const Logo = styled.img`
   width: 200px;
 
