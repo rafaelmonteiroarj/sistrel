@@ -51,3 +51,25 @@ export const Description = styled.div`
 export const Text = styled.span`
   display: block;
 `;
+
+export const Information = styled.div`
+  padding: 0 1rem;
+  font-size: 1.2rem;
+
+  ${media.lessThan('1280px')`
+    font-size: 1rem;
+  `}
+
+  ${media.lessThan('928px')`
+    font-size: 0.9rem;
+  `}
+
+  ${media.lessThan('768px')`
+    width: 100%;
+    padding: 1rem 0;
+
+    p {
+      padding: 10px 0;
+    }
+  `}
+`;

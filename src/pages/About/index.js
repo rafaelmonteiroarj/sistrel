@@ -2,7 +2,6 @@ import React from 'react';
 
 import Single from '../../components/Single';
 import Highlights from '../../components/Highlights';
-import Company from '../../components/Company';
 import Specialty from '../../components/Specialty';
 import PaymentsAndCertificates from '../../components/PaymentsAndCertificates';
 import Line from '../../components/UI/Line';
@@ -17,7 +16,34 @@ const About = () => {
           title="TRADIÇÃO E QUALIDADE"
           description="A mais de 28 anos no mercado, oferecendo qualidade."
         />
-        <Company />
+        <S.Information>
+          <p>
+            A Sistrel é uma empresa especializada no ramo da construçao civil há
+            mais de 90 anos e especializada e certificada para Fornecimento e
+            soluçoes para Lajes e PréFabricadas tendo como seus principais
+            produtos viga, cortina, painel, placa, placas sob medidas , Lajes
+            alveolar e Protensão certificados pelos programas de qualidade PSQL
+            e normas exigidas pela ABNT.
+          </p>
+
+          <p>
+            Tendo um equipe de profissionais qualificados para Solucoes e
+            inovações de projetos e artefatos de concreto e fornecimento de ART
+            tem o comprometimento e a responsabilidade com seus clientes,
+            prestando um bom atendimento desde o inicio do orçamento até
+            finalizaçãoda da compra e com pós venda.
+          </p>
+
+          <p>
+            A empresa utiliza equipamentos desenvolvidos para produzir os
+            materiais sob medida para diversos tipos de obras.
+          </p>
+
+          <p>
+            Nossas Materias primas são todas certificadas garantindo um produto
+            final com qualidade e segurança para nossos clientes.
+          </p>
+        </S.Information>
         <S.CommitmentWrapper>
           <S.Commitment>
             <S.Title>Missão</S.Title>
