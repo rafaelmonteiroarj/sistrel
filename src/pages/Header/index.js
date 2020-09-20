@@ -1,10 +1,13 @@
 import React, { useContext, useCallback, useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { AppContext } from '../../lib/Context';
 
 import * as S from './styles';
 
 const Header = () => {
+  const { pathname } = useLocation();
+
   const [intFrameWidth, setIntFrameWidth] = useState(
     window.innerWidth ||
       document.documentElement.clientWidth ||
@@ -42,12 +45,14 @@ const Header = () => {
       <S.NavWrapper active={active}>
         <S.Menu>
           <S.Item>
-            <S.Link className="active" href="/">
+            <S.Link menuSelected={pathname === '/'} href="/">
               Home
             </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link href="/about">Sobre Nós</S.Link>
+            <S.Link menuSelected={pathname === '/about'} href="/about">
+              Sobre Nós
+            </S.Link>
           </S.Item>
           <S.Sub
             onMouseOver={() => {
@@ -85,33 +90,37 @@ const Header = () => {
             </S.MenuSub>
             <S.MenuSubItens productsActive={productsActive}>
               <S.SubItem>
-                <S.LinkSub href="#">Pré-Lajes</S.LinkSub>
+                <S.LinkSub href="/products/1">Pré-Lajes</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Lajes Prontas</S.LinkSub>
+                <S.LinkSub href="/products/2">Lajes Prontas</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Painel Treliçado 35 cm</S.LinkSub>
+                <S.LinkSub href="/products/3">Painel Treliçado 35 cm</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Escadas/Pré-Fabricados</S.LinkSub>
+                <S.LinkSub href="/products/4">Escadas/Pré-Fabricados</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Escoramentos/Travamento</S.LinkSub>
+                <S.LinkSub href="/products/5">
+                  Escoramentos/Travamento
+                </S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Sistema Integrado</S.LinkSub>
+                <S.LinkSub href="/products/6">Sistema Integrado</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Produção em Canteiro</S.LinkSub>
+                <S.LinkSub href="/products/7">Produção em Canteiro</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="#">Nossos Serviços</S.LinkSub>
+                <S.LinkSub href="/products/8">Nossos Serviços</S.LinkSub>
               </S.SubItem>
             </S.MenuSubItens>
           </S.Sub>
           <S.Item>
-            <S.Link href="#">Obras Realizadas</S.Link>
+            <S.Link menuSelected={pathname === '/works'} href="/works">
+              Obras Realizadas
+            </S.Link>
           </S.Item>
           <S.Item>
             <S.Link href="#">Contato</S.Link>

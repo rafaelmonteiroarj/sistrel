@@ -177,12 +177,14 @@ export const Link = styled.a`
     }
   }
 
-  &.active {
+  ${(props) =>
+    props.menuSelected === true &&
+    `
     &:before {
       opacity: 1;
       width: 100%;
     }
-  }
+  `}
 
   ${media.lessThan('1210px')`
     color: var(--color);
