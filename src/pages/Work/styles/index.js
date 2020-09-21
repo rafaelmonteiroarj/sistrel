@@ -5,9 +5,9 @@ export const WorkWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 2rem;
+  padding: 0 2rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
 
   ${media.lessThan('768px')`
     justify-content: center;
@@ -17,7 +17,7 @@ export const WorkWrapper = styled.div`
 export const WorkItem = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 
   ${media.lessThan('768px')`
     width: 100%;

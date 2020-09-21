@@ -90,30 +90,28 @@ const Header = () => {
             </S.MenuSub>
             <S.MenuSubItens productsActive={productsActive}>
               <S.SubItem>
-                <S.LinkSub href="/products/1">Pré-Lajes</S.LinkSub>
+                <S.LinkSub href="/product/1">Pré-Lajes</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/2">Lajes Prontas</S.LinkSub>
+                <S.LinkSub href="/product/2">Lajes Prontas</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/3">Painel Treliçado 35 cm</S.LinkSub>
+                <S.LinkSub href="/product/3">Painel Treliçado 35 cm</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/4">Escadas/Pré-Fabricados</S.LinkSub>
+                <S.LinkSub href="/product/4">Escadas/Pré-Fabricados</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/5">
-                  Escoramentos/Travamento
-                </S.LinkSub>
+                <S.LinkSub href="/product/5">Escoramentos/Travamento</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/6">Sistema Integrado</S.LinkSub>
+                <S.LinkSub href="/product/6">Sistema Integrado</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/7">Produção em Canteiro</S.LinkSub>
+                <S.LinkSub href="/product/7">Produção em Canteiro</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/products/8">Nossos Serviços</S.LinkSub>
+                <S.LinkSub href="/product/8">Nossos Serviços</S.LinkSub>
               </S.SubItem>
             </S.MenuSubItens>
           </S.Sub>
@@ -123,7 +121,9 @@ const Header = () => {
             </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link href="#">Contato</S.Link>
+            <S.Link menuSelected={pathname === '/contact'} href="/contact">
+              Contato
+            </S.Link>
           </S.Item>
           <S.Item>
             <S.Link href="#">Orçamento</S.Link>
