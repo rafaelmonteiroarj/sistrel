@@ -9,7 +9,7 @@ import { AppContext } from '../../lib/Context';
 
 import * as S from './styles';
 
-const Single = ({ children, sectionEnabled }) => {
+const Single = ({ children, sectionEnabled, orcamentoEnabled }) => {
   const { menu } = useContext(AppContext);
   const [backToTop, setBackToTop] = useState(false);
 
@@ -27,7 +27,7 @@ const Single = ({ children, sectionEnabled }) => {
         <Header />
         <Section sectionEnabled={sectionEnabled} />
         <S.Main>{children}</S.Main>
-        <S.Orcamento className="orcamento">
+        <S.Orcamento orcamentoEnabled={orcamentoEnabled} className="orcamento">
           <S.Title>ATENDEMOS TODO O BRASIL</S.Title>
           <Button type="submit" kind="danger" size="large">
             SOLICITE UM ORÇAMENTO
@@ -49,12 +49,14 @@ const Single = ({ children, sectionEnabled }) => {
 };
 
 Single.defaultProps = {
-  sectionEnabled: true
+  sectionEnabled: true,
+  orcamentoEnabled: true
 };
 
 Single.propTypes = {
   children: PropTypes.node.isRequired,
-  sectionEnabled: PropTypes.bool
+  sectionEnabled: PropTypes.bool,
+  orcamentoEnabled: PropTypes.bool
 };
 
 export default Single;

@@ -15,7 +15,7 @@ export const Wrapper = styled.header`
   background-color: var(--background);
   z-index: 30;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     flex-direction: column;
   `}
 `;
@@ -23,7 +23,7 @@ export const Wrapper = styled.header`
 export const MenuLogo = styled.div`
   padding: 2rem;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,7 +37,7 @@ export const LinkLogo = styled.a``;
 export const Logo = styled.img`
   width: 200px;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     width: 180px;
   `}
 
@@ -58,7 +58,7 @@ export const MenuToggle = styled.div`
   transition-duration: 0.4s;
   margin-top: -5px;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     display:  block;
   `}
 `;
@@ -106,7 +106,7 @@ export const Three = styled.div`
 `;
 
 export const NavWrapper = styled.nav`
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     width: 100%;
     transition: height 0.5s;
     overflow: hidden;
@@ -127,7 +127,7 @@ export const Menu = styled.ul`
   display: flex;
   flex-direction: row;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     min-height: 100vh;
     width: 100vw;
     height: auto;
@@ -144,7 +144,7 @@ export const Item = styled.li`
   cursor: pointer;
   letter-spacing: 0.1rem;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     all: initial;
     padding: 30px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
@@ -186,9 +186,11 @@ export const Link = styled.a`
     }
   `}
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     color: var(--color);
     text-decoration: none;
+
+    display: flex;
   `}
 `;
 
@@ -200,7 +202,7 @@ export const Sub = styled.li`
   cursor: pointer;
   letter-spacing: 0.1rem;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     all: initial;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
@@ -211,7 +213,7 @@ export const Sub = styled.li`
 `;
 
 export const MenuSub = styled.div`
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -225,7 +227,7 @@ export const Accordion = styled.i`
   font-weight: bold;
   display: none;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     display: ${(props) => (props.productsActive === true ? `block` : `none`)};
   `}
 `;
@@ -249,7 +251,7 @@ export const MenuSubItens = styled.ul`
     max-height: 100vh;
   `}
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     all: initial;
     display: flex;
     flex-direction: column;
@@ -273,7 +275,7 @@ export const SubItem = styled.li`
     background-color: var(--color3);
   }
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     all: initial;
     padding: 25px;
     cursor: pointer;
@@ -287,7 +289,7 @@ export const LinkSub = styled.a`
   color: var(--color);
   text-decoration: none;
 
-  ${media.lessThan('1210px')`
+  ${media.lessThan('1350px')`
     padding: 0.2rem;
     color: var(--color);
     position: relative;

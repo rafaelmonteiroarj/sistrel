@@ -54,6 +54,7 @@ const Header = () => {
               Sobre Nós
             </S.Link>
           </S.Item>
+
           <S.Sub
             onMouseOver={() => {
               if (intFrameWidth > 1210) {
@@ -127,6 +128,9 @@ const Header = () => {
           </S.Item>
           <S.Item>
             <S.Link href="#">Orçamento</S.Link>
+          </S.Item>
+          <S.Item>
+            <S.Link href="#">Seja um Parceiro/Fornecedor</S.Link>
           </S.Item>
         </S.Menu>
       </S.NavWrapper>

@@ -8,8 +8,6 @@ const Input = React.forwardRef((props, ref) => {
   const {
     type,
     typeInput,
-    withIcon,
-    icon,
     className,
     placeholder,
     shadow,
@@ -21,9 +19,6 @@ const Input = React.forwardRef((props, ref) => {
     disabled,
     maxLength
   } = props;
-  let iconWrapper;
-
-  if (withIcon) iconWrapper = <S.InputAddOnItem>{icon}</S.InputAddOnItem>;
 
   const btnClass = classNames(className, {
     'shadow-1': shadow === true,
@@ -37,9 +32,9 @@ const Input = React.forwardRef((props, ref) => {
 
   return (
     <S.InputAddOn>
-      {iconWrapper}
       <S.InputAddOnField
         ref={ref}
+        size={size}
         disabled={disabled}
         name={name}
         type={type}
@@ -74,7 +69,6 @@ Input.defaultProps = {
   placeholder: 'Informe um valor ...',
   shadow: false,
   error: false,
-  size: 'large-100',
   disabled: false,
   maxLength: 255,
   value: ''
@@ -124,7 +118,7 @@ Input.propTypes = {
   /**
    * Specify the input size you want to create
    */
-  size: SizeTypes.size,
+  size: SizeTypes.size.isRequired,
 
   /**
    * Specify whether the input should be flagged in disabled.

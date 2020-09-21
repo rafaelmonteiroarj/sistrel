@@ -51,7 +51,7 @@ export const Orcamento = styled.div`
   background-color: var(--color2);
   height: 150px;
 
-  display: flex;
+  display: ${(props) => (props.orcamentoEnabled === true ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: center;
   align-items: center;

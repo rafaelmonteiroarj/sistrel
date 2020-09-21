@@ -61,7 +61,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .input-field-regular {
-    max-width: 200px;
+    max-width: 400px;
   }
 
   .input-field-100 {
@@ -83,6 +83,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     border-radius: .25rem;
     min-width: 10rem;
+  }
+
+  .reset-link {
+    text-decoration: none;
   }
 
   .btn:disabled {

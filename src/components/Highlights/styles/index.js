@@ -11,6 +11,10 @@ export const Title = styled.div`
   ${media.lessThan('620px')`
     font-size: 1.2rem;
   `}
+
+  ${media.lessThan('460px')`
+    font-size: 1rem;
+  `}
 `;
 
 export const Description = styled.div`
