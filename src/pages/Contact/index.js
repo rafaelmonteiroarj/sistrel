@@ -5,7 +5,7 @@ import PaymentsAndCertificates from '../../components/PaymentsAndCertificates';
 import Highlights from '../../components/Highlights';
 import Line from '../../components/UI/Line';
 
-// import * as S from './styles';
+import * as S from './styles';
 
 const Contact = () => {
   return (
@@ -16,7 +16,16 @@ const Contact = () => {
           description="Entre em contato conosco para que possamos indicar o melhor produto para sua obra."
         />
 
-        <div>sdfs</div>
+        <S.ContactWrapper>
+          <S.Form>
+            <div>Formulário</div>
+            {/* <div>fsfs</div> */}
+          </S.Form>
+          <S.Information>
+            <div>Mapa</div>
+            {/* <div>fasfds</div> */}
+          </S.Information>
+        </S.ContactWrapper>
         <Line />
         <PaymentsAndCertificates />
       </Single>

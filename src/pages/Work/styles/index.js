@@ -4,12 +4,23 @@ import media from 'styled-media-query';
 export const WorkWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  ${media.lessThan('1256px')`
+    max-width: 800px;
+  `}
+`;
+
+export const Works = styled.div`
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 2rem;
   align-items: center;
   justify-content: start;
 
-  ${media.lessThan('768px')`
+  ${media.lessThan('855px')`
     justify-content: center;
   `}
 `;
@@ -18,8 +29,9 @@ export const WorkItem = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0.5rem 1rem;
+  width: 400px;
 
-  ${media.lessThan('768px')`
+  ${media.lessThan('855px')`
     width: 100%;
     align-items: center;
     flex-direction: column-reverse;
@@ -55,7 +67,7 @@ export const Title = styled.div`
     font-size: 0.8rem;
   `}
 
-  ${media.lessThan('768px')`
+  ${media.lessThan('855px')`
     text-align: center;
   `}
 `;

@@ -5,12 +5,47 @@ import Highlights from '../../components/Highlights';
 
 import * as S from './styles';
 
-const Product = () => {
+const Product = ({ match }) => {
+  const { params } = match;
+  console.log('>>>>>>>', params);
+
+  let title = '';
+
+  switch (params.id) {
+    case '1':
+      title = 'Pré-Lajes';
+      break;
+    case '2':
+      title = 'Lajes Prontas';
+      break;
+    case '3':
+      title = 'Painel Treliçado 35 cm';
+      break;
+    case '4':
+      title = 'Escadas/Pré-Fabricados';
+      break;
+    case '5':
+      title = 'Escoramentos/Travamento';
+      break;
+    case '6':
+      title = 'Sistema Integrado';
+      break;
+    case '7':
+      title = 'Produção em Canteiro';
+      break;
+    case '8':
+      title = 'Nossos Serviços';
+      break;
+    default:
+      title = 'In development ....';
+      break;
+  }
+
   return (
     <>
       <Single sectionEnabled={false}>
         <Highlights
-          title="Pré-Lajes"
+          title={title}
           description="Desenvolvidas com tecnologia na medida certa, os produtos destacam-se pelo excelente custo benefício."
         />
         <S.Information>

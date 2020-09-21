@@ -34,7 +34,7 @@ export const Image = styled.img``;
 
 export const ImageExample = styled.div`
   background: #868e96;
-  width: 1000px;
+  width: 100%;
   height: 400px;
   display: flex;
   align-items: center;
