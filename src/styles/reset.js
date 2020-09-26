@@ -142,6 +142,12 @@ button:focus {
   outline:0;
 }
 
+a {
+  outline: none;
+  text-decoration: none;
+  color: var(--color);
+}
+
 `;
 
 export default ResetStyle;

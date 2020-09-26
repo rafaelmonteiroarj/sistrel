@@ -1,4 +1,6 @@
+import 'dotenv/config';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import * as S from './styles';
 
@@ -12,12 +14,27 @@ const Footer = () => {
             <S.Line />
             <S.Links>
               <S.MenuLinks>
-                <S.LinkOption>Home</S.LinkOption>
-                <S.LinkOption>Sobre Nós</S.LinkOption>
-                <S.LinkOption>Produtos</S.LinkOption>
-                <S.LinkOption>Obras Realizadas</S.LinkOption>
-                <S.LinkOption>Contato</S.LinkOption>
-                <S.LinkOption>Orçamento</S.LinkOption>
+                <Link to={process.env.REACT_APP_HOME}>
+                  <S.LinkOption>Home</S.LinkOption>
+                </Link>
+                <Link to={process.env.REACT_APP_ABOUT}>
+                  <S.LinkOption>Sobre Nós</S.LinkOption>
+                </Link>
+                <Link to={process.env.REACT_APP_PRODUCT}>
+                  <S.LinkOption>Produtos</S.LinkOption>
+                </Link>
+                <Link to={process.env.REACT_APP_WORKS}>
+                  <S.LinkOption>Obras Realizadas</S.LinkOption>
+                </Link>
+                <Link to={process.env.REACT_APP_CONTACT}>
+                  <S.LinkOption>Contato</S.LinkOption>
+                </Link>
+                <Link to={process.env.REACT_APP_BUDGET}>
+                  <S.LinkOption>Orçamento</S.LinkOption>
+                </Link>
+                <Link to={process.env.REACT_APP_PROVIDER}>
+                  <S.LinkOption>Quero Ser Fornecedor</S.LinkOption>
+                </Link>
               </S.MenuLinks>
             </S.Links>
           </S.Item>
@@ -51,20 +68,38 @@ const Footer = () => {
                 <S.LinkOption>Fone: (11) 4446-6163</S.LinkOption>
                 <S.LinkOption>Fone: (11) 4446-6562</S.LinkOption>
                 <S.LinkOption>Fone: (11) 4498-0400</S.LinkOption>
-                <S.LinkOption>Email: comercial@sistrel.com.br</S.LinkOption>
+                <a href={`mailto:${process.env.REACT_APP_EMAIL}`}>
+                  <S.LinkOption>Email: comercial@sistrel.com.br</S.LinkOption>
+                </a>
               </S.MenuLinks>
             </S.Links>
             <S.SocialIcons>
               <S.SocialIconsMenu>
-                <S.SocialOption>
-                  <S.Icon className="fa fa-facebook" />
-                </S.SocialOption>
-                <S.SocialOption>
-                  <S.Icon className="fa fa-linkedin" />
-                </S.SocialOption>
-                <S.SocialOption>
-                  <S.Icon className="fa fa-youtube" />
-                </S.SocialOption>
+                <Link
+                  to={{ pathname: process.env.REACT_APP_FACEBOOK }}
+                  target="_blank"
+                >
+                  <S.SocialOption>
+                    <S.Icon className="fa fa-facebook" />
+                  </S.SocialOption>
+                </Link>
+                <Link
+                  to={{ pathname: process.env.REACT_APP_LINKEDIN }}
+                  target="_blank"
+                >
+                  <S.SocialOption>
+                    <S.Icon className="fa fa-linkedin" />
+                  </S.SocialOption>
+                </Link>
+                <Link
+                  to={{ pathname: process.env.REACT_APP_YOUTUBE }}
+                  target="_blank"
+                >
+                  <S.SocialOption>
+                    <S.Icon className="fa fa-youtube" />
+                  </S.SocialOption>
+                </Link>
+
                 <S.SocialOption>
                   <S.Icon className="fa fa-whatsapp" />
                 </S.SocialOption>

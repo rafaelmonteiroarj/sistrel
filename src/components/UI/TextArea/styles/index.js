@@ -28,11 +28,10 @@ export const TextAreaAddOnField = styled.textarea`
   background: var(--background-option-2);
   font-size: 14px;
   height: 150px;
-  width: 400px;
   padding: 11px 20px;
 
   &:disabled {
-    background-color: #e9ecef;
+    background-color: var(--input-color);
     opacity: 1;
   }
 

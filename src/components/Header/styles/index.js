@@ -290,7 +290,7 @@ export const LinkSub = styled.a`
   text-decoration: none;
 
   ${media.lessThan('1350px')`
-    padding: 0.2rem;
+    padding: 1rem;
     color: var(--color);
     position: relative;
     text-decoration: none;

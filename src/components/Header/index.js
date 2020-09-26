@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import React, { useContext, useCallback, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -45,12 +46,18 @@ const Header = () => {
       <S.NavWrapper active={active}>
         <S.Menu>
           <S.Item>
-            <S.Link menuSelected={pathname === '/'} href="/">
+            <S.Link
+              menuSelected={pathname === '/'}
+              href={process.env.REACT_APP_HOME}
+            >
               Home
             </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link menuSelected={pathname === '/about'} href="/about">
+            <S.Link
+              menuSelected={pathname === '/about'}
+              href={process.env.REACT_APP_ABOUT}
+            >
               Sobre Nós
             </S.Link>
           </S.Item>
@@ -117,20 +124,36 @@ const Header = () => {
             </S.MenuSubItens>
           </S.Sub>
           <S.Item>
-            <S.Link menuSelected={pathname === '/works'} href="/works">
+            <S.Link
+              menuSelected={pathname === '/works'}
+              href={process.env.REACT_APP_WORKS}
+            >
               Obras Realizadas
             </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link menuSelected={pathname === '/contact'} href="/contact">
+            <S.Link
+              menuSelected={pathname === '/contact'}
+              href={process.env.REACT_APP_CONTACT}
+            >
               Contato
             </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link href="#">Orçamento</S.Link>
+            <S.Link
+              menuSelected={pathname === '/budget'}
+              href={process.env.REACT_APP_BUDGET}
+            >
+              Orçamento
+            </S.Link>
           </S.Item>
           <S.Item>
-            <S.Link href="#">Seja um Parceiro/Fornecedor</S.Link>
+            <S.Link
+              menuSelected={pathname === '/provider'}
+              href={process.env.REACT_APP_PROVIDER}
+            >
+              Seja um Parceiro/Fornecedor
+            </S.Link>
           </S.Item>
         </S.Menu>
       </S.NavWrapper>

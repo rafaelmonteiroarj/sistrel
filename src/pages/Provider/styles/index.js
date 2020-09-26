@@ -6,10 +6,7 @@ export const BudgetWrapper = styled.div`
   padding: 1rem;
   max-width: 1200px;
   margin: auto;
-
-  ${media.lessThan('1024px')`
-    flex-direction: column;
-  `}
+  justify-content: center;
 
   ${media.lessThan('550px')`
     padding: 0;

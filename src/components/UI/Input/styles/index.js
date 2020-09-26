@@ -31,7 +31,7 @@ export const InputAddOnField = styled.input`
   height: auto;
 
   &:disabled {
-    background-color: #e9ecef;
+    background-color: var(--input-color);
     opacity: 1;
   }
 

@@ -1,8 +1,9 @@
 import React, { useCallback, useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import Header from '../../pages/Header';
-import Section from '../../pages/Section';
+import Header from '../Header';
+import Section from '../Section';
 import Button from '../UI/Button';
 import Footer from '../../pages/Footer';
 import { AppContext } from '../../lib/Context';
@@ -29,9 +30,11 @@ const Single = ({ children, sectionEnabled, orcamentoEnabled }) => {
         <S.Main>{children}</S.Main>
         <S.Orcamento orcamentoEnabled={orcamentoEnabled} className="orcamento">
           <S.Title>ATENDEMOS TODO O BRASIL</S.Title>
-          <Button type="submit" kind="danger" size="large">
-            SOLICITE UM ORÇAMENTO
-          </Button>
+          <Link to="/budget">
+            <Button type="submit" kind="danger" size="large">
+              SOLICITE UM ORÇAMENTO
+            </Button>
+          </Link>
         </S.Orcamento>
         <Footer />
         <S.BackToTop

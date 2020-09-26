@@ -33,11 +33,11 @@ export const ImageWrapper = styled.div`
 export const Image = styled.img``;
 
 export const ImageExample = styled.div`
-  background: #868e96;
+  background: var(--background5);
   width: 100%;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--color);
 `;

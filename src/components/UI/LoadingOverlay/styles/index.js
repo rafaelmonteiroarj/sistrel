@@ -29,4 +29,6 @@ export const Spin = styled.div`
   border-left-color: transparent;
   border-right-color: transparent;
   animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+  -webkit-animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+  -moz-animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
 `;

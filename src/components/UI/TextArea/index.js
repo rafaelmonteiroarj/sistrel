@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { oneOf } from 'prop-types';
 import classNames from 'classnames';
 
 import * as S from './styles';
@@ -13,11 +13,14 @@ const TextArea = React.forwardRef((props, ref) => {
     value,
     onChange,
     error,
-    disabled
+    disabled,
+    size
   } = props;
 
   const btnClass = classNames(className, {
     'shadow-1': shadow === true,
+    'textArea-field-regular': size === 'regular',
+    'textArea-field-100': size === 'large-100',
     'is-invalid-formik': error === true,
     'is-valid-formik': error === false
   });
@@ -38,7 +41,12 @@ const TextArea = React.forwardRef((props, ref) => {
   );
 });
 
+const SizeTypes = {
+  size: oneOf(['regular', 'large-100'])
+};
+
 TextArea.defaultProps = {
+  size: 'regular',
   className: '',
   placeholder: 'Informe um valor ...',
   shadow: false,
@@ -52,6 +60,11 @@ TextArea.propTypes = {
    * Specify the classes of your TextArea
    */
   className: PropTypes.string,
+
+  /**
+   * Specify the input size you want to create
+   */
+  size: SizeTypes.size,
 
   /**
    * Specify the placeholder of your TextArea

@@ -58,7 +58,7 @@ export const MenuLinks = styled.ul`
 export const LinkOption = styled.li`
   font-family: 'Lato';
   font-size: 14px;
-  color: #fff;
+  color: var(--color);
   line-height: 32px;
   width: 100%;
 `;
