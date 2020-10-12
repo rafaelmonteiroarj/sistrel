@@ -19,7 +19,7 @@ const About = () => {
         <S.Information>
           <p>
             A Sistrel é uma empresa especializada no ramo da construçao civil há
-            mais de 90 anos e especializada e certificada para Fornecimento e
+            mais de 28 anos e especializada e certificada para Fornecimento e
             soluçoes para Lajes e PréFabricadas tendo como seus principais
             produtos viga, cortina, painel, placa, placas sob medidas , Lajes
             alveolar e Protensão certificados pelos programas de qualidade PSQL

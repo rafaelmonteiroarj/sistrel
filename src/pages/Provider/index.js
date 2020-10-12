@@ -5,20 +5,21 @@ import PaymentsAndCertificates from '../../components/PaymentsAndCertificates';
 import Highlights from '../../components/Highlights';
 
 import Line from '../../components/UI/Line';
+import Form from './form';
 
 import * as S from './styles';
 
-const NotFound = () => {
+const Provider = () => {
   return (
     <>
       <Single sectionEnabled={false}>
         <Highlights
-          title="Ops..."
-          description="Desculpe, mas a página que você está tentando visualizar não existe =("
+          title="QUERO SER FORNECEDOR"
+          description="Por favor, preencha os dados abaixo para que possamos entrar em contato."
         />
-        <S.NotFoundWrapper>
-          <S.Title>404</S.Title>
-        </S.NotFoundWrapper>
+        <S.BudgetWrapper>
+          <Form />
+        </S.BudgetWrapper>
         <Line />
         <PaymentsAndCertificates />
       </Single>
@@ -26,4 +27,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Provider;

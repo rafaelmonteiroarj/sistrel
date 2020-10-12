@@ -9,7 +9,6 @@ const Button = (props) => {
     'btn-info': kind === 'info',
     'btn-danger': kind === 'danger',
     'btn-primary': kind === 'primary',
-    'btn-warning': kind === 'warning',
     'btn-small': size === 'small',
     'btn-medium': size === 'medium',
     'btn-large': size === 'large',

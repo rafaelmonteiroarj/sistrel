@@ -18,7 +18,7 @@ export const Commitment = styled.div`
 `;
 
 export const Title = styled.div`
-  color: #da251b;
+  color: var(--color-title);
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Title = styled.div`
-  color: #da251b;
+  color: var(--color-title);
   text-align: center;
   font-size: 1.8rem;
   font-weight: bold;

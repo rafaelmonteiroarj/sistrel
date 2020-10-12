@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     --background2: #0c0c0c;
     --background3: #cecece;
     --background4: #7F7F7F;
+    --background5: #868e96;
 
     --color-title: #da251b;
     --color: #ffffff;
@@ -15,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     --color-5: #212529;
     --color-6: #333;
     --color-7: #000;
+    --color-8: #6b6b6b;
+    --color-9: #e3e3e3;
 
     --btn-info: #0288d1;
     --btn-info-hover: #026fab;
@@ -26,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     --color-shadow-option1: rgba(62, 57, 107, 0.16);
     --color-shadow-option2: rgba(0, 0, 0, 0.15);
 
+    --input-color: e9ecef;
     --input-focus-color: #eff3f6;
     --input-border-color: #ced4da;
     --input-error-border-color: #e3262e;
@@ -66,6 +70,14 @@ const GlobalStyle = createGlobalStyle`
 
   .input-field-100 {
     max-width: 100%;
+  }
+
+  .textArea-field-regular {
+    width: 400px;
+  }
+
+  .textArea-field-100 {
+    width: 100%;
   }
 
   .btn {
@@ -118,6 +130,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 12px 24px;
   }
 
+  .large-file {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
   .btn-small-100 {
     font-size: 12px;
     padding: 10px 16px;
@@ -142,10 +159,10 @@ const GlobalStyle = createGlobalStyle`
     border-color: var(--btn-primary);
   }
 
-  .btn-secondary {
-    color: var(--color-6);
-    background-color: transparent;
-    box-shadow: var(--color-shadow-option2) 0px 0px 0px 1px inset;
+  .btn-info {
+    color: var(--color);
+    background-color: var(--btn-info);
+    border-color: var(--btn-info);
   }
 
   .btn-danger {
@@ -186,15 +203,27 @@ const GlobalStyle = createGlobalStyle`
     border-color: var(--border-color-option-1);
   }
 
+  .file-input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
   /** spinner rotate */
   @keyframes rotate {
     0% {
-      transform: rotateZ(-360deg)
+      transform: rotateZ(-360deg);
     }
+
     100% {
-      transform: rotateZ(0deg)
+      transform: rotateZ(0deg);
     }
   }
+
 
   .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
     -webkit-transition: all 0.25s ease-in;
@@ -203,7 +232,7 @@ const GlobalStyle = createGlobalStyle`
     -o-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
     opacity: 0.4;
-    filter: alpha(opacity=40);
+    ${'' /* filter: alpha(opacity=40); */}
     position: absolute;
     z-index: 2;
     top: 20px;

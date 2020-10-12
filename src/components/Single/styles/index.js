@@ -37,7 +37,7 @@ export const BackToTop = styled.button`
   right: 20px;
   height: 50px;
   width: 50px;
-  color: #fff;
+  color: var(--color);
   background: #333333;
   border: none;
   border-radius: 50vh;
@@ -59,7 +59,7 @@ export const Orcamento = styled.div`
 
 export const Title = styled.div`
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color);
   font-size: 1rem;
   padding-bottom: 1rem;
 `;

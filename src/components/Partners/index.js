@@ -6,7 +6,7 @@ const Partners = () => {
   return (
     <>
       <S.Title>PARCEIROS</S.Title>
-      <S.PartnersWrapper>
+      {/* <S.PartnersWrapper>
         <S.Image src="images/image004.jpg" />
         <S.Image src="images/image006.jpg" />
         <S.Image src="images/image010.jpg" />
@@ -15,7 +15,7 @@ const Partners = () => {
         <S.Image src="images/image014.jpg" />
         <S.Image src="images/image019.png" />
         <S.Image src="images/image020.png" />
-      </S.PartnersWrapper>
+      </S.PartnersWrapper> */}
     </>
   );
 };

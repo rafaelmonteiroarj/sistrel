@@ -10,7 +10,7 @@ import Form from './form';
 
 import * as S from './styles';
 
-const Contact = () => {
+const Budget = () => {
   return (
     <>
       <Single sectionEnabled={false}>
@@ -33,4 +33,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Budget;

@@ -10,14 +10,14 @@ const PaymentsAndCertificates = () => {
           <S.LineCertificate>Associados</S.LineCertificate>
           <S.Image src="images/bndes.png" alt="BNDES" width="200px" />
         </S.Item>
-        <S.Item>
+        {/* <S.Item>
           <S.LineCertificate>Formas de pagamento</S.LineCertificate>
           <S.Image
             src="images/payments.png"
             alt="Formas de Pagamentos"
             width="250px"
           />
-        </S.Item>
+        </S.Item> */}
         <S.Item>
           <S.LineCertificate>Qualificações</S.LineCertificate>
           <S.Image src="images/psql.png" alt="PSQ-L" width="100px" />
