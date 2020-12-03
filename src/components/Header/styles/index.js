@@ -268,7 +268,7 @@ export const MenuSubItens = styled.ul`
 `;
 
 export const SubItem = styled.li`
-  padding: 1rem;
+  /* padding: 1rem; */
   border-bottom: 1px solid var(--color2);
 
   &:hover {
@@ -286,9 +286,11 @@ export const SubItem = styled.li`
 `;
 
 export const LinkSub = styled.a`
+  padding: 1rem;
   color: var(--color);
   text-decoration: none;
   display: block;
+  /* background-color: green; */
 
   ${media.lessThan('1350px')`
     padding: 1rem;
