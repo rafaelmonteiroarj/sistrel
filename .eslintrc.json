@@ -72,6 +72,7 @@
     "import/export": 2,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/button-has-type": "off"
+    "react/button-has-type": "off",
+    "react/no-unescaped-entities": 0
   }
 }

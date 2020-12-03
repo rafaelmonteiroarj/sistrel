@@ -44,14 +44,47 @@ const Footer = () => {
             <S.Line />
             <S.Links>
               <S.MenuLinks>
-                <S.LinkOption>Pré-Lajes</S.LinkOption>
-                <S.LinkOption>Lajes Prontas</S.LinkOption>
-                <S.LinkOption>Painel Treliçado 35 cm</S.LinkOption>
-                <S.LinkOption>Escadas/Pré-Fabricados</S.LinkOption>
-                <S.LinkOption>Escoramentos/Travamento</S.LinkOption>
-                <S.LinkOption>Sistema Integrado</S.LinkOption>
-                <S.LinkOption>Produção em Canteiro</S.LinkOption>
-                <S.LinkOption>Nossos Serviços</S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/1">
+                    Vigota com Lajotas Cerâmicas
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/2">
+                    Vigota com EPS
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/3">
+                    Vigota com Cordoalhas Engraxadas
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/4">
+                    Painel Treliçado BW25 / 30
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/5">
+                    Painel Treliçado BW125
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/6">
+                    Painel Treliçado BW240/280
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/7">
+                    Cortina de Contenção
+                  </S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/8">Protensão</S.LinkProduct>
+                </S.LinkOption>
+                <S.LinkOption>
+                  <S.LinkProduct href="/product/9">Laje Alveolar</S.LinkProduct>
+                </S.LinkOption>
               </S.MenuLinks>
             </S.Links>
           </S.Item>
@@ -101,7 +134,13 @@ const Footer = () => {
                 </Link>
 
                 <S.SocialOption>
-                  <S.Icon className="fa fa-whatsapp" />
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5511999375327&text=Olá,%20meu%20amigo!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <S.Icon className="fa fa-whatsapp" />
+                  </a>
                 </S.SocialOption>
               </S.SocialIconsMenu>
             </S.SocialIcons>

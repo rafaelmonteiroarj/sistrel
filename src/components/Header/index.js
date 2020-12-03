@@ -98,28 +98,39 @@ const Header = () => {
             </S.MenuSub>
             <S.MenuSubItens productsActive={productsActive}>
               <S.SubItem>
-                <S.LinkSub href="/product/1">Pré-Lajes</S.LinkSub>
+                <S.LinkSub href="/product/1">
+                  Vigota com Lajotas Cerâmicas
+                </S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/2">Lajes Prontas</S.LinkSub>
+                <S.LinkSub href="/product/2">Vigota com EPS</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/3">Painel Treliçado 35 cm</S.LinkSub>
+                <S.LinkSub href="/product/3">
+                  Vigota com Cordoalhas Engraxadas
+                </S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/4">Escadas/Pré-Fabricados</S.LinkSub>
+                <S.LinkSub href="/product/4">
+                  Painel Treliçado BW25 / 30
+                </S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/5">Escoramentos/Travamento</S.LinkSub>
+                <S.LinkSub href="/product/5">Painel Treliçado BW125</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/6">Sistema Integrado</S.LinkSub>
+                <S.LinkSub href="/product/6">
+                  Painel Treliçado BW240/280
+                </S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/7">Produção em Canteiro</S.LinkSub>
+                <S.LinkSub href="/product/7">Cortina de Contenção</S.LinkSub>
               </S.SubItem>
               <S.SubItem>
-                <S.LinkSub href="/product/8">Nossos Serviços</S.LinkSub>
+                <S.LinkSub href="/product/8">Protensão</S.LinkSub>
+              </S.SubItem>
+              <S.SubItem>
+                <S.LinkSub href="/product/9">Laje Alveolar</S.LinkSub>
               </S.SubItem>
             </S.MenuSubItens>
           </S.Sub>
