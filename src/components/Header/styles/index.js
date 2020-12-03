@@ -288,6 +288,7 @@ export const SubItem = styled.li`
 export const LinkSub = styled.a`
   color: var(--color);
   text-decoration: none;
+  display: block;
 
   ${media.lessThan('1350px')`
     padding: 1rem;
