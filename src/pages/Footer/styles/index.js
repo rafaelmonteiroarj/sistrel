@@ -63,6 +63,10 @@ export const LinkOption = styled.li`
   width: 100%;
 `;
 
+export const LinkProduct = styled.a`
+  text-decoration: none;
+`;
+
 export const SocialIcons = styled.div``;
 
 export const SocialIconsMenu = styled.ul`
