@@ -237,7 +237,7 @@ export const MenuSubItens = styled.ul`
   flex-direction: column;
   background-color: var(--color4);
   position: absolute;
-  min-width: 200px;
+  min-width: 360px;
   margin: 1.4rem 0 0 -3rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
@@ -262,7 +262,7 @@ export const MenuSubItens = styled.ul`
     ${(props) =>
       props.productsActive === true &&
       `
-        max-height: 600px;
+        max-height: 900px;
       `}
   `}
 `;
