@@ -5,7 +5,7 @@
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "dev": "yarn start:dev",
-    "build": "react-scripts build && cp build/index.html build/200.html",
+    "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
     "build-and-serve": "yarn build && yarn start",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
     "start:dev": "react-scripts start",
