@@ -7,7 +7,7 @@ const Information = () => {
     <S.InformationWrapper>
       <p>
         Fundada em 1989, o <S.Dark>Grupo Sistrel</S.Dark> é uma empresa com mais
-        de 31 anos de experiência na fabricação de lajes e pré-fabricados.
+        de 30 anos de experiência na fabricação de lajes e pré-fabricados.
         Presente no Estado de São Paulo o Grupo se tornou grande referência no
         ramo da Construção Civil.
       </p>
