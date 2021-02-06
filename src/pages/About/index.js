@@ -14,12 +14,12 @@ const About = () => {
       <Single sectionEnabled={false}>
         <Highlights
           title="TRADIÇÃO E QUALIDADE"
-          description="A mais de 28 anos no mercado, oferecendo qualidade."
+          description="A mais de 30 anos no mercado, oferecendo qualidade."
         />
         <S.Information>
           <p>
             A Sistrel é uma empresa especializada no ramo da construçao civil há
-            mais de 28 anos e especializada e certificada para Fornecimento e
+            mais de 30 anos e especializada e certificada para Fornecimento e
             soluçoes para Lajes e PréFabricadas tendo como seus principais
             produtos viga, cortina, painel, placa, placas sob medidas , Lajes
             alveolar e Protensão certificados pelos programas de qualidade PSQL

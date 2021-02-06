@@ -14,7 +14,7 @@ const Home = () => {
       <Single sectionEnabled>
         <Highlights
           title="TRADIÇÃO E QUALIDADE"
-          description="A mais de 31 anos no mercado, oferecendo qualidade."
+          description="A mais de 30 anos no mercado, oferecendo qualidade."
         />
         <Company />
         <Specialty />
