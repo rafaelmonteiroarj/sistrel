@@ -73,6 +73,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/button-has-type": "off",
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "react/no-array-index-key": 0
   }
 }

@@ -63,21 +63,6 @@ export const Label = styled.label`
   font-weight: bold;
 `;
 
-export const FileWrapper = styled.div`
-  padding: 1rem 0 0.2rem 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-`;
-
-export const FileName = styled.span`
-  padding: 0.3rem 0 0.2rem 0;
-`;
-
-export const Black = styled.i`
-  font-weight: bold;
-`;
-
-export const Icon = styled.i`
-  padding-right: 0.3rem;
+export const Error = styled.span`
+  color: var(--color3);
 `;
