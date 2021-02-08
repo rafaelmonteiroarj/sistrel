@@ -25,7 +25,7 @@ app.use(express.static(configs.caminho)); // Serve os outros arquivos, como CSSs
 
 app.get('*', (req, res) => {
   // O wildcard '*' serve para servir o mesmo index.html independente do caminho especificado pelo navegador.
-  res.sendFile(path.join(__dirname, configs.caminho, 'index.html'));
+  res.sendFile(path.join(__dirname, './build/index.html'));
 });
 
 app.listen(configs.port, () => {
