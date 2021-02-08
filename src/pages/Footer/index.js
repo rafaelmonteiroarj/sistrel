@@ -151,8 +151,7 @@ const Footer = () => {
             <S.Line />
             <S.Links>
               <S.MenuLinks>
-                <S.LinkOption>Seg à Sex 08:30 às 18:00</S.LinkOption>
-                <S.LinkOption>Sábado 09:00 às 14:00</S.LinkOption>
+                <S.LinkOption>Seg à Sex 07:00 às 17:00</S.LinkOption>
               </S.MenuLinks>
             </S.Links>
           </S.Item>
