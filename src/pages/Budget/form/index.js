@@ -15,7 +15,7 @@ import * as S from './styles';
 
 const Form = () => {
   const validationSchema = Yup.object({
-    name: Yup.string().required('nome é obrigatório.'),
+    name: Yup.string().required('nome é obrigatório.').min(3, 'nome inválido.'),
     phoneNumber: Yup.string()
       .required('telefone é obrigatório.')
       .min(14, 'telefone inválido.'),
