@@ -10,6 +10,7 @@
     "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
     "start:dev": "react-scripts start",
     "start": "node server",
+    "postinstall": "npm run build",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/*.js --fix"
   },

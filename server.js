@@ -28,7 +28,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, configs.caminho, 'index.html'));
 });
 
-const PORT = configs.port || 3000;
-app.listen(PORT, () => {
+app.listen(configs.port, () => {
   console.log(`Escutando na ${configs.port}!`);
 });
