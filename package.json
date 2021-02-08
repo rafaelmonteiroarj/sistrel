@@ -9,7 +9,7 @@
     "build-and-serve": "yarn build && serve -s build -l 3000",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
     "start:dev": "react-scripts start",
-    "start": "node server",
+    "start": "node ./src/server.js",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/*.js --fix"
   },
