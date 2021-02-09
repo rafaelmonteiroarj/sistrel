@@ -5,12 +5,11 @@
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "dev": "yarn start:dev",
-    "build": "react-scripts build",
-    "build-and-serve": "yarn build && serve -s build -l 3000",
+    "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
+    "build-and-serve": "yarn build && yarn start",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
     "start:dev": "react-scripts start",
-    "start": "node server",
-    "postinstall": "npm run build",
+    "start": "serve -s build -l 3000",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/*.js --fix"
   },
@@ -63,7 +62,6 @@
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
