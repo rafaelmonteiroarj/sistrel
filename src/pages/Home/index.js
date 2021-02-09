@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <Single sectionEnabled>
         <Highlights
-          title="TRADIÇÃO E QUALIDADE"
+          title="TRADIÇÃO E QUALIDADE rafa"
           description="A mais de 30 anos no mercado, oferecendo qualidade."
         />
         <Company />
