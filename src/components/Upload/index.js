@@ -7,7 +7,7 @@ import Button from '../UI/Button';
 export const Upload = (props) => {
   const { setFieldValue } = props;
   const { getRootProps, getInputProps } = useDropzone({
-    // accept: 'image/*',
+    accept: 'image/*, application/pdf, image/vnd.dwg,.dwg',
     onDrop: (acceptedFiles) => {
       console.log('acceptedFiles', acceptedFiles);
       setFieldValue('files', acceptedFiles);
