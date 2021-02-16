@@ -13,6 +13,17 @@ import { Upload } from '../../../components/Upload';
 
 import * as S from './styles';
 
+// const removeItemOnce = (arr, value) => {
+//   // console.log('arr', arr);
+//   console.log('value', value);
+//   // const index = arr.indexOf(value);
+//   // console.log('index', index);
+//   // if (index > -1) {
+//   //   arr.splice(index, 1);
+//   // }
+//   return arr.splice(value, 1);
+// };
+
 const Form = () => {
   const validationSchema = Yup.object({
     name: Yup.string().required('nome é obrigatório.').min(3, 'nome inválido.'),
@@ -31,7 +42,8 @@ const Form = () => {
     productOfInterest: Yup.string().required(
       'produto de interrese é obrigatório.'
     ),
-    vao: Yup.string().required('vao e sobre carga é obrigatório.')
+    vao: Yup.string().required('vao e sobre carga é obrigatório.'),
+    files: Yup.array().required('Selecione um projeto.')
   });
 
   const [createBudget] = useMutation(ADD_BUDGET, {
@@ -239,13 +251,32 @@ const Form = () => {
           <S.FileWrapper>
             {values.files &&
               values.files.map((file, i) => (
-                <S.File key={i}>
-                  <S.Desc>arquivo:</S.Desc> {file.name}
-                  <S.Desc1>{` ==> `}</S.Desc1>
-                  <S.Desc>tamanho:</S.Desc>
-                  {file.size} bytes
-                </S.File>
+                <S.FileSelectedWrapper key={i}>
+                  <S.File>
+                    <S.Desc>-</S.Desc> {file.name}
+                    <S.Desc>{` ==> `}</S.Desc>
+                    {file.size} <S.Desc>bytes</S.Desc>
+                    {/* {file.size} bytes */}
+                  </S.File>
+                  {/* <S.LabelFile>remover</S.LabelFile> */}
+                  <S.Icon
+                    className="fa fa-times-circle"
+                    title="remover arquivo"
+                    onClick={() => {
+                      const newFiles = [...values.files]; // make a var for the new array
+                      newFiles.splice(i, 1);
+
+                      // const test = values.files;
+                      setFieldValue('files', newFiles);
+                      console.log('test >>>>>>>', values.files);
+                      console.log('change >>>>>>>', newFiles);
+                    }}
+                  />
+                </S.FileSelectedWrapper>
               ))}
+            {errors.files && touched.files ? (
+              <S.Error>{errors.files}</S.Error>
+            ) : null}
           </S.FileWrapper>
           <S.ButtonWrapper>
             <Button type="submit" kind="danger" size="large-100">

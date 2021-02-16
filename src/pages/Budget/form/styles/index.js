@@ -72,7 +72,9 @@ export const Black = styled.i`
 `;
 
 export const Icon = styled.i`
-  padding-right: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: var(--color3);
 `;
 
 export const Error = styled.span`
@@ -86,6 +88,10 @@ export const FileWrapper = styled.div`
   position: relative;
 `;
 
+export const FileSelectedWrapper = styled.div`
+  display: flex;
+`;
+
 export const File = styled.span``;
 
 export const Desc = styled.span`
@@ -95,4 +101,12 @@ export const Desc = styled.span`
 export const Desc1 = styled.span`
   color: var(--color3);
   font-weight: 600;
+`;
+
+export const LabelFile = styled.label`
+  margin-left: 1rem;
+  background-color: var(--color3);
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #ffffff;
 `;
